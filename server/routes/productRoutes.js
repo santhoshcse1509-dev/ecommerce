@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.get('/', getProducts);
 router.get('/:id', getProductById);
-router.post('/', protect, createProduct); // Temporarily removed Admin check
-router.put('/:id', protect, updateProduct);
-router.delete('/:id', protect, deleteProduct);
+router.post('/', protect, admin, createProduct);
+router.put('/:id', protect, admin, updateProduct);
+router.delete('/:id', protect, admin, deleteProduct);
 
 module.exports = router;

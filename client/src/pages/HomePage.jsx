@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import api from '../services/api';
 import ProductCard from '../components/ProductCard';
-import { Loader2, ArrowRight, Star, Truck, ShieldCheck, Headphones, Search } from 'lucide-react';
+import { Loader2, ArrowRight, Truck, ShieldCheck, Headphones, Search } from 'lucide-react';
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);

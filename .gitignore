@@ -4,5 +4,5 @@ node_modules
 dist
 build
 goshop_local_data
-package-lock.json
+# package-lock.json
 *.log
