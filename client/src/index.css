@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #232f3e;
+  --secondary: #febd69;
+  --accent: #f0c14b;
+  --bg-main: #eaeded;
+  --card-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  
+  /* Tailwind v4 theme extensions in CSS */
+  --color-amazon-slate: #232f3e;
+  --color-amazon-amber: #febd69;
+  --color-amazon-yellow: #f0c14b;
+}
+
+@theme {
+  --animate-fade-in: fadeIn 0.5s ease-out forwards;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+@layer components {
+  .amazon-btn {
+    @apply bg-amber-400 hover:bg-amber-500 transition-colors px-4 py-2 rounded-lg font-medium shadow-sm hover:shadow-md;
+  }
+  
+  .amazon-btn-outline {
+    @apply bg-white border border-slate-300 hover:bg-slate-50 transition-colors px-4 py-2 rounded-lg font-medium;
+  }
+
+  .nav-bar {
+    @apply bg-slate-900 text-white sticky top-0 z-50 py-3 shadow-lg;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+  }
+
+  .premium-gradient {
+    @apply bg-gradient-to-r from-slate-900 to-indigo-900;
+  }
+}
+
+/* Custom Keyframes for v4 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

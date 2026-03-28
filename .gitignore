@@ -1,0 +1,8 @@
+node_modules
+.env
+.DS_Store
+dist
+build
+goshop_local_data
+package-lock.json
+*.log
